@@ -1,58 +1,36 @@
 <html>
     <head>
-
+        <link rel="stylesheet" href="style.css">
+        <title>Rock Paper Scissors Game!</title>
     </head>
     <body>
-        <script>
-            function computerPlay(){
-                let compChoice = Math.floor(Math.random() * 3);
-                if(compChoice === 0)
-                    return "rock";
-                else if(compChoice === 1)
-                    return "paper";
-                else
-                    return "scissor";
-            }
-
-            function playRound(playerSelection, computerSelection) {
-                if(playerSelection === 'rock' && computerSelection === 'rock')
-                    return ["It's a tie!", "tie"];
-                else if(playerSelection === 'rock' && computerSelection === 'paper')
-                    return ["You lose! Paper beats Rock!", "lose"];
-                else if(playerSelection === 'rock' && computerSelection === 'scissor')
-                    return ["You win! Rock beats Scissors!", "win"];
-                else if(playerSelection === 'paper' && computerSelection === 'rock')
-                    return ["You win! Paper beats Rock", "win"];
-                else if(playerSelection === 'paper' && computerSelection === 'paper')
-                    return ["It's a tie!", "tie"];
-                else if(playerSelection === 'paper' && computerSelection === 'scissor')
-                    return ["You lose! Scissors beats paper!","lose"];
-                else if(playerSelection === 'scissor' && computerSelection === 'rock')
-                    return ["You lose! Rock beats Scissors", "lose"];
-                else if(playerSelection === 'scissor' && computerSelection === 'paper')
-                    return ["You win! Scissors beats paper!","win"];
-                else if(playerSelection === 'scissor' && computerSelection === 'scissor')
-                    return ["It's a tie!","tie"];
-            }
-            function game(){
-                let win = 0;
-                let lose = 0;
-                let playerSelection = '';
-                let result = '';
-
-                for(let i = 0; i < 5; i++){
-                    playerSelection = window.prompt("Choice: ");
-                    result = playRound(playerSelection, computerPlay());
-                    if(result[1] === "win")
-                        win++;
-                    else if(result[1] === "lose")
-                        lose++;
-                    
-                    console.log(result[0]);
-                }
-                console.log(`Win: ${win} Lose: ${lose}`);
-            }
-            game();
-        </script>
+       <div class="container">
+            <div class="title">
+                <h1 style="margin: 20px 0px;">Rock Paper Scissors!</h1>
+            </div>
+            <div class="result">
+                <h1 class="result-style">You Win!</h1>
+            </div>
+            <div class="options">
+                <a href="" class="option-style"><div class="option-items"><h2 class="hidden">Rock</h2><img src="images/rock.png" alt="rock"></div></a>
+                <a href="" class="option-style"><div class="option-items"><h2 class="hidden">Paper</h2><img src="images/paper.png" alt="paper"></div></a>
+                <a href="" class="option-style"><div class="option-items"><h2 class="hidden">Scissor</h2><img src="images/scissor.png" alt="scissor"></div></a>
+            </div>
+            <div class="round-result">
+                <h2 class="result-output">Your Choice: Scissor</h2>
+                <h2 class="result-output">You lost this round</h2>
+                <h2 class="result-output">Computer's Choice: Scissor</h2>
+            </div>
+            <div class="score">
+                <div class="score-background">
+                    <h1>Score :</h1>
+                    <div class="score-tile"></div>
+                    <div class="score-tile"></div>
+                    <div class="score-tile"></div>
+                    <div class="score-tile"></div>
+                    <div class="score-tile"></div>
+                </div>
+            </div>
+       </div>
     </body>
 </html>
