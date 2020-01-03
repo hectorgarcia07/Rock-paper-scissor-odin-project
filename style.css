@@ -23,48 +23,62 @@
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
-}
-
-.option-style{
     text-decoration: none;
     border: 1px solid transparent;
     padding: 0px 5px 10px 5px;
+    cursor: pointer;
 }
-
-.option-style:hover{
-    border: 1px solid black;
+.option-items:hover .hidden{
+    visibility: visible;
 }
 .hidden{
     visibility: hidden;
+}
+
+.option-items:hover{
+    border: 1px solid black;
 }
 .options{
     display: flex;
     justify-content: space-evenly;
     
 }
+
 .round-result{
     display: flex;
     justify-content: space-evenly;
-}
-.result-output{
     visibility: hidden;
 }
 
 .score{
     display: flex;
     justify-content: center;
-    margin-top: 25px;
 }
 
 .score-background{
     display: flex;
     align-items: center;
-    
+    background-color: burlywood;
+    padding: 5px 10px;
 }
 .score-tile{
     padding: 10px;
     margin: 5px;
     background-color: black;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
+}
+
+#reset{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    visibility: hidden;
+}
+.reset-style{
+    padding: 0px 10px;
+    background-color: rgb(169, 249, 255);
+}
+#reset:hover{
+    cursor: pointer;
 }

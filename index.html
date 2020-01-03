@@ -9,17 +9,17 @@
                 <h1 style="margin: 20px 0px;">Rock Paper Scissors!</h1>
             </div>
             <div class="result">
-                <h1 class="result-style">You Win!</h1>
+                <h1 class="result-style" id="finalResult">You Win!</h1>
             </div>
             <div class="options">
-                <a href="" class="option-style"><div class="option-items"><h2 class="hidden">Rock</h2><img src="images/rock.png" alt="rock"></div></a>
-                <a href="" class="option-style"><div class="option-items"><h2 class="hidden">Paper</h2><img src="images/paper.png" alt="paper"></div></a>
-                <a href="" class="option-style"><div class="option-items"><h2 class="hidden">Scissor</h2><img src="images/scissor.png" alt="scissor"></div></a>
+                <div class="option-items" id="rock"><h2 class="hidden">Rock</h2><img src="images/rock.png" alt="rock"></div>
+                <div class="option-items" id="paper"><h2 class="hidden">Paper</h2><img src="images/paper.png" alt="paper"></div>
+                <div class="option-items" id="scissor"><h2 class="hidden">Scissor</h2><img src="images/scissor.png" alt="scissor"></div>
             </div>
             <div class="round-result">
-                <h2 class="result-output">Your Choice: Scissor</h2>
-                <h2 class="result-output">You lost this round</h2>
-                <h2 class="result-output">Computer's Choice: Scissor</h2>
+                <h2 class="result-output">Your Choice: <span id="playerChoice">Scissor</span></h2>
+                <h2 class="result-output" id="roundResult">You lost this round!</h2>
+                <h2 class="result-output">Computer's Choice: <span id="computerChoice">Scissor</span></h2>
             </div>
             <div class="score">
                 <div class="score-background">
@@ -31,6 +31,8 @@
                     <div class="score-tile"></div>
                 </div>
             </div>
+            <div id="reset"><div class="reset-style"><h1>Play Again!</h1></div></div>
        </div>
     </body>
+    <script src="script.js"></script>
 </html>
